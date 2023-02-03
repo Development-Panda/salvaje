@@ -1,0 +1,446 @@
+/* font family para el logo */
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&display=swap');
+/* font family para el texto */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;600&display=swap');
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, header, body{
+  width: 100vw;
+  font-family: 'Quicksand', sans-serif;
+}
+h1{
+  font-family: 'Aboreto', cursive;
+}
+ul, a, li{
+  text-decoration: none;
+  list-style: none;
+  cursor: pointer;
+  color: #fff;
+}
+
+/* ------------ MANEJO DEL NAV BAR Y HEADER  --------------*/
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%; 
+  z-index: 99;
+}
+
+.list{
+  background-color: rgba(12, 11, 11, 0.856);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  padding: 10px 0;
+}
+.list li a{
+  display:flex;
+  flex-direction: row;
+  color: #fff;
+  font-size: 1em;
+}
+.list a  .dragon{
+  font-size: 24px;
+}
+.list i{
+  padding: 0 7px;
+}
+.nombre_restaurante{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  color: #fff;
+  font-weight: 600;
+  font-size: 45px;
+  background-image: linear-gradient(
+    0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)
+  ),url(/imagenes/header/header.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media screen and (max-width:1025px){
+  .list a{
+    font-size: .8em;
+  }
+
+}
+  @media screen and (max-width:768px){
+
+    .list a h5{
+      display: none;
+    }
+    .list a i{
+      font-size: 16px;
+      padding: 10px 7px;
+    }
+
+  }
+
+
+/* ------------ MANEJO DE LAS PROMOCIONES  --------------*/
+
+#promociones{
+  width: 100%;
+  margin: 100px auto;
+  text-align: center;
+}
+#promociones h2{
+  font-size: 3em;
+  padding: 25px 0;
+}
+#promociones .promociones-con{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 40px 0;
+
+}
+.promociones-con .promocion{
+  flex-basis: 20%;
+  width: 300px;
+  box-shadow: 0px 0px 36px -5px rgba(0,0,0,0.54);
+  border-radius: 10px;
+}
+.promociones-con img{
+  width: 100%;
+  border-radius: 10px;
+}
+.promociones-con p{
+  padding-bottom: 15px;
+}
+.promociones-con h6{
+  font-size: 1.4em;
+}
+
+@media screen and (max-width:680px){
+  #promociones .promociones-con{
+    flex-direction: column;
+
+  }
+  .promociones-con .promocion{
+    margin: 25px auto;
+}}
+
+
+
+/* ------------ MANEJO DE LAS COMENTARIOS  --------------*/
+
+#comentarios{
+  padding: 5% 0;
+}
+.contenedor-comentarios{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 100px 0;
+}
+#comentarios h2{
+  text-align: center;
+  font-size: 3em;
+  padding: 25px 0;
+  padding-bottom: 30px;
+}
+.comentarios-perfil{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  padding-top: 15px;
+}
+.comentario{
+  padding: 25px;
+  width: 33%;
+}
+.comentario img{
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.comentario p{
+  padding: 20px;
+  font-size: 1.2vw;
+}
+.comentario h4{
+  font-size: 1.5vw;
+  color: #e86a92;
+  font-weight: 500;
+  font-style: italic;
+}
+
+@media screen and (max-width:765px){
+  .comentarios-perfil{
+    flex-direction: column;
+  }
+  .comentario{
+    padding: 25px;
+    width: 100%;
+  }
+  .comentario p{
+
+    font-size:2vw;
+  }
+  .comentario h4{
+    font-size: 1.8vw;
+
+  }
+  .comentario img{
+    width: 50px;
+    height: 50px;
+  }
+ 
+}
+
+
+/* ------------ MANEJO DE LA UBICACION  --------------*/
+
+footer{
+  width: 100%;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+}
+footer .footer-con{
+  display: flex;
+  padding: 45px 0;
+  justify-content: space-evenly;
+}
+
+footer .informacion{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+footer .redes i{
+  font-size: 25px;
+  padding: 0 10px;
+}
+
+footer .locacion{
+  overflow:hidden;
+  height: 450px;
+  width: 50%;
+  border-radius: 15px;
+}
+footer iframe{
+  width: 100%;
+  height: 100%;
+}
+footer .copy{
+  padding: 50px 0;
+}
+
+@media screen and (max-width:900px){
+
+  footer .footer-con{
+    display: flex;
+    flex-direction: column;
+    padding: 45px 0;
+    justify-content: space-evenly;
+  }
+  .informacion{
+    padding-bottom: 50px;
+  }
+  footer .locacion{
+    overflow:hidden;
+    width: 100%;
+    
+  border-radius: 0;
+
+  }
+  
+
+}
+/* ------------ NOMBRE DE LA EMPRESA --------------*/
+.nombre_pagina {
+  text-align: center;
+  padding: 17% 0;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: rgb(255, 255, 255);
+  font-size: 2rem;
+}
+.hamburguesa{
+  background-image: linear-gradient(
+    0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)
+  ),url(/imagenes/menu/hamburgesa/header-titulo.jpg);
+
+} 
+.perro{
+  background-image: linear-gradient(
+    0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)
+  ),url(/imagenes/menu/perros/header-perros.jpg);
+}
+
+.otro{
+  background-image: linear-gradient(
+    0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)
+  ),url(/imagenes/menu/otros/header-otros.jpg);
+}
+
+.bebidas{
+  background-image: linear-gradient(
+    0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)
+  ),url(/imagenes/menu//bebidas/header-bebidas.jpg);
+}
+
+.nosotros{
+  background-image: linear-gradient(
+    0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)
+  ),url(/imagenes/nosotros/nosotros.jpg);
+}
+/* ------------ MANEJO DEL MENU  --------------*/
+
+
+
+#menu{
+  width: 100%;
+  margin: 50px auto;
+  text-align: center;
+  padding-bottom:25px ;
+}
+
+
+#menu .menu-hamburger{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding: 40px;
+
+}
+.carta{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 300px;
+  box-shadow: 0px 0px 36px -5px rgba(0,0,0,0.54);
+  border-radius: 10px;
+  margin: 25px;
+
+}
+.carta .img-carta{
+  width: 100%;
+  height: 246px;
+  margin: 0 auto 10px;
+}
+.carta img{
+  width: 100%;
+  height: 246px;
+  object-fit: cover;
+}
+.carta h3{
+  font-size: 1.4em;
+  padding: 10px;
+}
+.carta .ingredientes{
+  display: flex;
+  justify-content: center;
+}
+.carta .ingredientes h4{
+  font-size: 1.7rem;
+}
+
+.carta .precio{
+  font-size: 1.4em;
+  padding: 15px 0;
+}
+
+
+/* ------------ MANEJO Activo  --------------*/
+
+.navbar .activo{
+  padding-bottom: 5px;
+  border-bottom: 1px solid #fff;
+}
+
+/* ------------ MANEJO NOSOTROS  --------------*/
+.nosotros-info{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  margin: auto;
+  height: 550px;
+}
+.logo-salvaje{
+  font-size: 10rem;
+  flex-basis: 35%;
+  padding:25px;
+}
+.texto-salvaje{
+  font-size: 1.6em;
+  margin: 0 35px;
+}
+.nosotros-ingredientes{
+  margin: auto;
+  height: 650px;
+
+  display: flex;
+  align-items: flex-start;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: rgb(255, 255, 255);
+  background-image: linear-gradient(
+    0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)
+  ),url(/imagenes/nosotros/ingredientes.jpg);
+
+}
+.texto-salvaje2{
+  font-size: 2.6em;
+  margin: 0 35px;
+  text-align: center;
+  padding-top: 25px;
+}
+
+@media screen and (max-width:725px){
+
+  .logo-salvaje{
+    font-size: 5rem;
+  }
+  .texto-salvaje{
+    font-size: 1.2em;
+  }
+  .texto-salvaje2{
+    font-size: 2em;
+    margin: 0 15px;
+
+  }
+}
+
+@media screen and (max-width:520px){
+
+  .logo-salvaje{
+    font-size: 4rem;
+    padding: 0 5px;
+  }
+  .texto-salvaje{
+    font-size: 1em;
+    margin: 0 15px;
+  }
+  .texto-salvaje2{
+    font-size: 1.5em; 
+    margin: 0 15px;
+
+  }
+  .nombre_pagina {
+    padding: 27% 0;
+  }
+}
